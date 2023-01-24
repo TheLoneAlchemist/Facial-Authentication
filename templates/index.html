@@ -1,0 +1,75 @@
+{% extends 'base.html' %}
+
+
+{% block title %} Home {% endblock title %}
+{% block stylecss %}
+
+
+<style>
+  @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap");
+
+  html {
+    font-family: "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+</style>
+{% endblock stylecss %}
+
+
+
+
+{% block body %}
+
+
+<body class="leading-normal tracking-normal text-indigo-400 m-6 bg-cover bg-fixed"
+  style="background-image: url('/static/img/header.png');">
+  <div class="h-full">
+
+    <!--Main-->
+    <div class="container pt-24 md:pt-36 mx-auto flex flex-wrap flex-col md:flex-row items-center">
+      <!--Left Col-->
+      <div class="flex flex-col w-full xl:w-2/5 justify-center lg:items-start overflow-y-hidden">
+        <h1 class="my-4 text-3xl md:text-5xl text-white opacity-75 font-bold leading-tight text-center md:text-left">
+          Hii!
+          <span class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-pink-500 to-purple-500">
+            Welcome to Face Authentication.
+          </span>
+          We are glad to see you here
+        </h1>
+        {% if request.user.is_authenticated %}
+        <p class="leading-normal text-base md:text-4xl mb-8 text-center md:text-left">
+          {{request.user.first_name}}
+        </p>
+        <div class="flex items-center justify-between pt-4">
+          <a href="/profile">
+            <button
+              class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+              type="button">
+              Profile
+            </button></a>
+        </div>
+        {% else %}
+        <p class="leading-normal text-base md:text-2xl mb-8 text-center md:text-left">
+          Are you ready to Authenticate?
+        </p>
+        <div class="flex items-center justify-between pt-4">
+          <a href="/signup">
+            <button
+              class="bg-gradient-to-r from-purple-800 to-green-500 hover:from-pink-500 hover:to-green-500 text-white font-bold py-2 px-4 rounded focus:ring transform transition hover:scale-105 duration-300 ease-in-out"
+              type="button">
+              Sign Up
+            </button></a>
+        </div>
+        {% endif %}
+
+
+      </div>
+    </div>
+  </div>
+
+
+  {% endblock body %}
+
+  {% block scripts %}
+
+
+  {% endblock scripts %}

@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+
+{% block title %}About Us{% endblock title %}
+
+{% block body %}
+<!-- Jumbotron -->
+<div class="p-12 text-center relative overflow-hidden bg-no-repeat bg-cover rounded-lg" style="
+  background-image: url('https://source.unsplash.com/random/1280x720/?wallpaper,landscape');
+  height: 400px;
+">
+  <div class="absolute top-0 right-0 bottom-0 overflow-hidden bg-fixed" style="background-color: rgba(0, 0, 0, 0.6)">
+    <div class="flex justify-center items-center h-full">
+      <div class="text-white mx-px-2" style="margin-left: 10%; margin-right: 10%;">
+        <h2 class="font-semibold text-4xl mb-4">About Me</h2>
+        <span class="font-semibold text-xl mb-6"> Hii! I am <p class="text-green-500 underline decoration-blue-300">
+            Deepak Pradhan</p>
+          <p> a passionate programmer from India.
+            This is a face authentication web application which takes a image from
+            the camera 📸 and send the base64 image data to backend along with email and password.
+            And authentication is done at the server side.
+          </p>
+        </span>
+        <div class="flex space-x-2 my-2 justify-center">
+          <div>
+            <a href="https://github.com/TheLoneAlchemist/">
+              <button type="button" class="inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded-full shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out">Github</button>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Jumbotron -->
+
+
+
+{% endblock body %}
