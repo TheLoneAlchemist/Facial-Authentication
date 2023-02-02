@@ -57,5 +57,10 @@ Start the server
 
 ## Demo
 
-Insert gif or link to demo
+
+https://user-images.githubusercontent.com/92817340/216244835-12d00437-d45c-4c42-9a3c-1a0fca82d37d.mp4
+
+## Screenshot 
+
+![1](https://user-images.githubusercontent.com/92817340/216246111-df6c31b5-5c51-4f66-99e6-db194a6507cf.PNG)
 
